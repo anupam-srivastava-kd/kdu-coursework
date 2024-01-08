@@ -49,6 +49,7 @@ async function createCommentWithMetricsTable(metrics) {
   // Create a comment on the GitHub issue
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments`;
 
+  
   // Axios configuration
   const axiosConfig = {
     headers: {
