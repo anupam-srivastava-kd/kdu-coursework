@@ -54,6 +54,7 @@ async function createCommentWithMetricsTable(metrics) {
   // Create a comment on the GitHub issue
   const apiUrl = `https://api.github.com/repos/${owner}/${repo}/issues/${issueNumber}/comments`;
 
+  
   // Axios configuration
   const axiosConfig = {
     headers: {
@@ -167,6 +168,7 @@ async function fetchMetricsData() {
       params,
       ...axiosConfig,
     });
+    console.log("Response : ", response)
     const metrics = response.data.measures.map((metric) => ({
       key: metric.metric,
       value: metric.value,
